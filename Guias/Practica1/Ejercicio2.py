@@ -1,7 +1,7 @@
 # extraer palabra de un texto y guardarla en variable
 
 def extractor(texto,palabraAExtraer):
-    longitud = texto.length
+    longitud = len(texto)
     posicion = texto.find(palabraAExtraer)
     if posicion < 0:
         return "No se encontro la palabra"
