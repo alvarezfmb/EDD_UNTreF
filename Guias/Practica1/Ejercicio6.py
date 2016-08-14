@@ -1,16 +1,18 @@
-matriz1 = [[1,2],[3,4]]
-matriz2 = [[4,5],[6,7]]
+matriz1 = [[1, 2], [3, 4]]
+matriz2 = [[4, 5], [6, 7]]
 
-def sumarMatricesCuadradas(matriz1,matriz2):
-    matrizResult = matriz1 # setea el tamanio de la matriz resultante
+
+def sumarMatricesCuadradas(matriz1, matriz2):
+    matrizResult = matriz1  # setea el tamanio de la matriz resultante
     i = 0
     for row in matriz2:
-        j = 0 # lo defino aca porque necesito que vuelva a cero con cada nueva fila que itero
+        j = 0  # lo defino aca porque necesito que vuelva a cero con cada nueva fila que itero
         for column in row:
             matrizResult[i][j] += column
             j += 1
         i += 1
     return matrizResult
+
 
 def diagonalDeMatriz(matriz):
     resultado = []
@@ -20,6 +22,7 @@ def diagonalDeMatriz(matriz):
         i += 1
     return resultado
 
+
 # otra manera, como en los apuntes
 
 def diagonalFuncional(matriz):
@@ -27,6 +30,7 @@ def diagonalFuncional(matriz):
     # for itera hasta tamanio de matriz
     diag = [matriz[i][i] for i in range(len(matriz))]
     return diag
+
 
 def crearMatrizIdentidad(size):
     result = []
@@ -37,11 +41,13 @@ def crearMatrizIdentidad(size):
         result.append(temp)
     return result
 
+
 def crearFilaDeCeros(size):
     aux = []
     for i in range(size):
         aux.append(0)
     return aux
+
 
 def trasponer(matriz):
     result = matriz
@@ -53,4 +59,3 @@ def trasponer(matriz):
             j += 1
         i += 1
     return result
-

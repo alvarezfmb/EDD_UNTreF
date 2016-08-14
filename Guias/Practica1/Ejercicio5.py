@@ -1,4 +1,5 @@
-list = [1,2,3,4,5,6,7,8,9,10]
+list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 
 def sumatoria(list):
     total = 0
@@ -6,16 +7,19 @@ def sumatoria(list):
         total += x
     return total
 
+
 def promedio(list):
-    return sumatoria(list)/len(list)
+    return sumatoria(list) / len(list)
+
 
 def factorial(n):
     if n == 1:
         return 1
-    else :
+    else:
         return factorial(n - 1) * n
 
-def menorIgualMayor(list,num):
+
+def menorIgualMayor(list, num):
     mayor = []
     menor = []
     igual = []
@@ -26,7 +30,8 @@ def menorIgualMayor(list,num):
             menor.append(x)
         else:
             igual.append(x)
-    return mayor,menor,igual
+    return mayor, menor, igual
+
 
 # x,y,z = menorIgualMayor(list,5)
 # print(x,y,z)
@@ -38,11 +43,12 @@ def isPrime(n):
     if n == 1:
         return True
 
-    for i in range(2,n):
+    for i in range(2, n):
         if n % i == 0:
             return False
 
     return True
+
 
 def listaPrimos(list):
     listaSalida = []
