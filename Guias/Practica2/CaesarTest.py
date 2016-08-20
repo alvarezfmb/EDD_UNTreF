@@ -12,8 +12,8 @@ class TestCaesar(unittest.TestCase):
         """Asegurarse que con clave 0 nos da la misma frase
         """
         for f in self.frases:
-            self.assertEqual(Cifrador.cifrar(f, 0), f)
-            print(Cifrador.cifrar(f, 0))
+            self.assertEqual(Cifrador.cifrar(self, f, 0), f)
+            print(Cifrador.cifrar(self, f, 0))
 
     def test_cifrar(self):
         """Asegurarse que cifra bien con frases (sin normalizar) conocidas
