@@ -20,8 +20,8 @@ class TestCaesar(unittest.TestCase):
         """
         clave = 3
         for i in range(len(self.frases)):
-            self.assertEqual(Cifrador.cifrar(self.frases[i], clave), self.cifradas3[i])
-            print(Cifrador.cifrar(self.frases[i], clave))
+            self.assertEqual(Cifrador.cifrar(self, self.frases[i], clave), self.cifradas3[i])
+            print(Cifrador.cifrar(self, self.frases[i], clave))
 
     def test_cifrar_descifrar(self):
         """Asegurarse que si ciframos y desciframos con la misma clave
@@ -29,5 +29,5 @@ class TestCaesar(unittest.TestCase):
         """
         clave = random.randint(0, 26)
         for f in self.frases:
-            self.assertEqual(Cifrador.descifrar(Cifrador.cifrar(f, clave), clave), f)
-            print(Cifrador.descifrar(Cifrador.cifrar(f, clave), clave))
+            self.assertEqual(Cifrador.descifrar(self, Cifrador.cifrar(self, f, clave), clave), f)
+            print(Cifrador.descifrar(self, Cifrador.cifrar(self, f, clave), clave))
