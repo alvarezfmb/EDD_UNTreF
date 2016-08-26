@@ -13,5 +13,24 @@ def llamada_a_oops():
         print("Excepcion salvada")
 
 
+def ejercicio5sub1():
+    try:
+        oops()
+    except IndexError:
+        print("Index")
+    else:
+        print("else")  # se imprime si HAY error
+
+
+def ejercicio5sub2():
+    try:
+        oops()
+        print("ej")  # se imprime si NO HAY error, no se imprime si HAY error
+    except IndexError:
+        print("Index")
+
+
 if __name__ == '__main__':
-    llamada_a_oops()
+    # llamada_a_oops()
+    ejercicio5sub1()
+    # ejercicio5sub2()
