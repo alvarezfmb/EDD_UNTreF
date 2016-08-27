@@ -1,9 +1,6 @@
 import pickle
 
 
-# agenda = []
-
-
 def agregar_a_agenda(nombre, domicilio, tel, *emails):
     datos = (nombre, {'Tel': tel, 'Email': [], 'Domicilio': domicilio})
     for i in emails:
