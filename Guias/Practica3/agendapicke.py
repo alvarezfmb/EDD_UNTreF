@@ -12,7 +12,7 @@ def agregar_a_agenda(nombre, domicilio, tel, *emails):
 
 def conservar_en_pickle(data):
     # with cierra el archivo luego de que se ejecute lo de adentro, sin importar si hay excepcion
-    with open('/Users/fmbalvarez/PycharmProjects/EDD_UNTreF/Guias/Practica3/agenda.p', 'wb') as handle:
+    with open('/Users/fmbalvarez/PycharmProjects/EDD_UNTreF/Guias/Practica3/agendapickle.p', 'wb') as handle:
         pickle.dump(data, handle)
 
 
@@ -26,6 +26,11 @@ def mostrar_agenda_pickle():
     print(ap)
 
 
+def print_picke_name():
+    ap = abrir_pickle()
+    print(ap[0][0])
+
+
 if __name__ == '__main__':
     # agregar_a_agenda("Carl", {'Direccion': "Fake 123",'CP': 1678}, "40402020""pepi@gmail.com", "sds@gm.com","otro@mas.org.uy")
     # agenda = abrir_pickle()
@@ -33,3 +38,4 @@ if __name__ == '__main__':
     # conservar_en_pickle(agenda)
     # agregar_a_agenda("Ana",{'Direccion': "San Martin 2100", 'Piso': 9},"1523343202","ana@banana.net","ana@simmetry.com")
     print(abrir_pickle())
+    print_picke_name()
