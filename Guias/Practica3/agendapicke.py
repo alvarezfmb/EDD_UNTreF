@@ -32,7 +32,8 @@ def print_picke_name():
 
 
 if __name__ == '__main__':
-    # agregar_a_agenda("Carl", {'Direccion': "Fake 123",'CP': 1678}, "40402020""pepi@gmail.com", "sds@gm.com","otro@mas.org.uy")
+    agregar_a_agenda("Carl", {'Direccion': "Fake 123", 'CP': 1678}, "40402020", "pepi@gmail.com", "sds@gm.com",
+                     "otro@mas.org.uy")
     # agenda = abrir_pickle()
     # print(agenda)
     # conservar_en_pickle(agenda)
