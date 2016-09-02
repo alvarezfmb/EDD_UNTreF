@@ -30,8 +30,6 @@ class CSVBiciComunas:
 
     def listar(self):
         dicc_ordenado = natsort.humansorted(self.dicc_comunas.items())
-        print(self.dicc_comunas)
-        print("DICC ORDENADO", dicc_ordenado)
         for x in dicc_ordenado:
             print(x[0], ":", x[1]['Barrios'], "\n")
             sub_dicc = natsort.humansorted(x[1]['Bicicleterias'])
