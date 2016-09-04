@@ -31,7 +31,7 @@ class Mapping:
                     print(row[-8])
                 except IndexError:
                     print("Excepcion atrapada")
-            self.gmap.heatmap(self.lista_lat, self.lista_lng, threshold=1, radius=75)
+            self.gmap.heatmap(self.lista_lng, self.lista_lat, threshold=1, radius=75)
             # Threshold: https://en.wikipedia.org/wiki/Threshold_model
             self.gmap.draw('mymap.html')
 
