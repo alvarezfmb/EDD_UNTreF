@@ -16,7 +16,7 @@ class Mapping:
         self.lista_lng = []
         self.maps_client = googlemaps.Client(key=KEY)
 
-    # tomo subsample de 1000 casos para construir heatmap de deptos en venta
+    # tomo subsample de 2000 casos para construir heatmap de deptos en venta
     def heatmap_deptos(self):
         with open(self.path, errors='ignore') as csvfile:
             reader = csv.reader(csvfile, delimiter=";")
