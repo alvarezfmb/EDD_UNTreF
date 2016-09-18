@@ -39,8 +39,37 @@ def lista_de_regularizadas(dicc):
     return dicc_salida
 
 
+def leer_linea(fd):
+    try:
+        return next(fd)
+    except:
+        return None
+
+
+def materias_regularizadas():
+    fd = open('materias_parcial.csv', "r")
+    reader = csv.reader(fd, delimiter=';')
+    next(reader)
+    linea = leer_linea(reader)
+    alumnos_materias = {}
+    while linea:
+        padron = linea[0]
+        alumnos_materias[padron] = []
+        while linea and padron == linea[0]:
+            materia = linea[1]
+            notas = {"P1": 0, "P2": 0, "R1": 0, "R2": 0}
+            while linea and padron == linea[0] and materia == linea[1]:
+                notas[linea[2]] = eval(linea[3])
+                if max(notas['P1'], notas['R1']) >= 4 and max(notas['P2'], notas['R2']) >= 4:
+                    if materia not in alumnos_materias[padron]:
+                        alumnos_materias[padron].append(materia)
+                linea = leer_linea(reader)
+    return alumnos_materias
+
+
 if __name__ == '__main__':
     dicc = leer_csv()
     print('DICC', dicc)
     salida = lista_de_regularizadas(dicc)
     print('SALIDA', salida)
+    print(materias_regularizadas())
