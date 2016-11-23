@@ -12,3 +12,25 @@ TP/.DS_Store
 .idea/vcs.xml
 
 .idea/workspace.xml
+
+TP/TP1-EDD-Alvarez-Buljubasic-Rombola/Trayecto.py
+
+TP/TP1-EDD-Alvarez-Buljubasic-Rombola/config.py
+
+TP/TP1-EDD-Alvarez-Buljubasic-Rombola/Consola.py
+
+TP/TP1-EDD-Alvarez-Buljubasic-Rombola/Excepciones.py
+
+TP/TP1-EDD-Alvarez-Buljubasic-Rombola/Formateador.py
+
+TP/TP1-EDD-Alvarez-Buljubasic-Rombola/MotorDeTrayectos.py
+
+TP/TP1-EDD-Alvarez-Buljubasic-Rombola/Tests/FormateadorTest.py
+
+TP/TP1-EDD-Alvarez-Buljubasic-Rombola/Tests/MotorDeTrayectosTest.py
+
+TP/TP1-EDD-Alvarez-Buljubasic-Rombola/Tests/RutaTest.py
+
+TP/TP1-EDD-Alvarez-Buljubasic-Rombola/Tests/TrayectoTest.py
+
+TP/TP1-EDD-Alvarez-Buljubasic-Rombola/Trayecto.py
