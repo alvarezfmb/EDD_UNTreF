@@ -51,6 +51,7 @@ def materias_regularizadas():
     reader = csv.reader(fd, delimiter=';')
     next(reader)
     linea = leer_linea(reader)
+    print('linea', linea)
     alumnos_materias = {}
     while linea:
         padron = linea[0]

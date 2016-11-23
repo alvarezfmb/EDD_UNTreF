@@ -12,24 +12,27 @@ if __name__ == '__main__':
 
     gmaps = googlemaps.Client(key=KEY)  # inicializa la aplicación para consultar
     # los mapas de google
-    ruta1 = gmaps.distance_matrix(ciudad1, ciudad2)
-    ruta1 = gmaps.distance_matrix(ciudad1, ciudad3, None, "es", None, "metric")
-    ruta2 = gmaps.distance_matrix(ciudad2, ciudad3)
-    ruta3 = gmaps.distance_matrix(ciudad3, ciudad1)
+    s = gmaps.geocode("Buenos Aires")
+    print(s[0]['geometry']['location'])
+
+    # ruta1 = gmaps.distance_matrix(ciudad1, ciudad2)
+    # ruta1 = gmaps.distance_matrix(ciudad1, ciudad3, None, "es", None, "metric")
+    # ruta2 = gmaps.distance_matrix(ciudad2, ciudad3)
+    # ruta3 = gmaps.distance_matrix(ciudad3, ciudad1)
 
     # def geocode(client, address=None, components=None, bounds=None, region=None,
     #            language=None):
 
-    geo = gmaps.geocode("Santiago", None, None, None, "es")
-    print(geo)
+    # geo = gmaps.geocode("Santiago", None, None, None, "es")
+    # print(geo)
 
-    print("RUTA 1 ", ruta1)
+    # print("RUTA 1 ", ruta1)
     # def distance_matrix(client, origins, destinations,
     #                    mode=None, language=None, avoid=None, units=None,
     #                    departure_time=None, arrival_time=None, transit_mode=None,
     #                    transit_routing_preference=None, traffic_model=None):
 
-    print("ruta1: ", ruta1, '\n\n')
+    # print("ruta1: ", ruta1, '\n\n')
     # print("ruta2: ", ruta2, '\n\n')
     # print("ruta3: ", ruta3, '\n\n')
 
